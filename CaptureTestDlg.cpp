@@ -671,25 +671,35 @@ void saveBitMap()
 				char outfile[] = "clipboard.bmp";
 				//SaveHBITMAP(hBitmap, outfile);
 
-				SaveBitmapToFile(hBitmap, outfile);
-				GlobalUnlock(hBitmap);
+				//SaveBitmapToFile(hBitmap, outfile);
 
-				CloseClipboard();
-				
-				WCHAR wszOutName[256];
-				memset(wszOutName, 0, sizeof(wszOutName));
+				if (SaveBitmapToFile(hBitmap, outfile))
+				{
+					GlobalUnlock(hBitmap);
 
-				MultiByteToWideChar(CP_ACP, 0, outfile, strlen(outfile) + 1, wszOutName,
-					sizeof(wszOutName) / sizeof(wszOutName[0]));
+					WCHAR wszOutName[256];
+					memset(wszOutName, 0, sizeof(wszOutName));
 
-				char pngName[] = "clipboard.png";
-				WCHAR wszClassName[256];
-				memset(wszClassName, 0, sizeof(wszClassName));
+					MultiByteToWideChar(CP_ACP, 0, outfile, strlen(outfile) + 1, wszOutName,
+						sizeof(wszOutName) / sizeof(wszOutName[0]));
 
-				MultiByteToWideChar(CP_ACP, 0, pngName, strlen(pngName) + 1, wszClassName,
-					sizeof(wszClassName) / sizeof(wszClassName[0]));
+					char pngName[] = "clipboard.png";
+					WCHAR wszClassName[256];
+					memset(wszClassName, 0, sizeof(wszClassName));
 
-				BMptoPNG(wszOutName, wszClassName);
+					MultiByteToWideChar(CP_ACP, 0, pngName, strlen(pngName) + 1, wszClassName,
+						sizeof(wszClassName) / sizeof(wszClassName[0]));
+
+					if (!BMptoPNG(wszOutName, wszClassName))
+					{
+						MessageBox(NULL, _T("图像文件转换失败！"), _T("辅助诊断助手"), MB_SYSTEMMODAL | MB_ICONERROR | MB_OK);
+					}
+				}
+				else
+				{
+					MessageBox(NULL, _T("创建位图文件失败！"), _T("辅助诊断助手"), MB_SYSTEMMODAL | MB_ICONERROR | MB_OK);
+				}
+
 				
 			}
 			CloseClipboard();
