@@ -7,22 +7,31 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CaptureTest", "CaptureTest.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release_DuilibStatic|Win32 = Release_DuilibStatic|Win32
 		Release_DuilibStatic|x64 = Release_DuilibStatic|x64
 		Release_DuilibStatic|x86 = Release_DuilibStatic|x86
+		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|Win32.Build.0 = Debug|Win32
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|x64.ActiveCfg = Debug|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|x64.Build.0 = Debug|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|x86.ActiveCfg = Debug|Win32
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Debug|x86.Build.0 = Debug|Win32
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|Win32.ActiveCfg = Release_DuilibStatic|Win32
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|Win32.Build.0 = Release_DuilibStatic|Win32
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|x64.ActiveCfg = Release_DuilibStatic|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|x64.Build.0 = Release_DuilibStatic|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|x86.ActiveCfg = Release_DuilibStatic|Win32
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release_DuilibStatic|x86.Build.0 = Release_DuilibStatic|Win32
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Release|Win32.ActiveCfg = Release|Win32
+		{20EE20CE-162E-49A3-AE05-990554D09553}.Release|Win32.Build.0 = Release|Win32
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release|x64.ActiveCfg = Release|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release|x64.Build.0 = Release|x64
 		{20EE20CE-162E-49A3-AE05-990554D09553}.Release|x86.ActiveCfg = Release|Win32
