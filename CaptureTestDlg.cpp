@@ -198,12 +198,12 @@ CCaptureTestDlg::CCaptureTestDlg(CWnd* pParent /*=NULL*/)
 /***********************************************以上部分为设置水印图片和水印文字，不需要则去掉 **************************/
 
 
-	wstring strSavePath = L"牛牛截图";
+	wstring strSavePath = L"科创截图";
 	gl_InitCaptureParam(ExtendFlagTypeEnum::emSetSaveName, (UINT_PTR)strSavePath.c_str()); //设置保存时的开始文字
 	gl_InitCaptureParam(ExtendFlagTypeEnum::emSetMagnifierBkColor, RGB(255, 255, 255)); //设置放大镜的背景色，不设置则透明
 	
 	//以下可以设置放大镜上的LOGO文字，如果不设置，默认显示“牛牛截图” 
-	//gl_InitCaptureParam(ExtendFlagTypeEnum::emSetMagnifierLogoText, (UINT_PTR)"牛牛截图(Ctrl+Shift+A)");
+	gl_InitCaptureParam(ExtendFlagTypeEnum::emSetMagnifierLogoText, (UINT_PTR)"科创截图(Ctrl+Shift+A)");
 	wstring strMagnifierLogoText = L"  可通过接口设置名称";
 	gl_InitCaptureParam(ExtendFlagTypeEnum::emSetMagnifierLogoText, (UINT_PTR)strMagnifierLogoText.c_str());
 	
